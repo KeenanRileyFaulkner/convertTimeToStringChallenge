@@ -17,14 +17,13 @@ describe('timeWord', () => {
         expect(timeWord('11:59')).toContain('am');
     });
 
-    // These tests aren't working but the errors are thrown correctly
-    // it('should throw an error for hours larger than 23', () => {
-    //     expect(timeWord('24:14')).toThrowErrorMatchingSnapshot();
-    // });
+    it('should throw an error for hours larger than 23', () => {
+        expect(() => timeWord('24:14')).toThrow(RangeError);
+    });
 
-    // it('should throw an error for minutes larger than 59', () => {
-    //     expect(timeWord('11:60')).toThrowErrorMatchingSnapshot();
-    // })
+    it('should throw an error for minutes larger than 59', () => {
+        expect(() => timeWord('11:60')).toThrow(RangeError);
+    })
 
     it('should display pm for times right after noon', () => {
         expect(timeWord('12:01')).toContain('pm');

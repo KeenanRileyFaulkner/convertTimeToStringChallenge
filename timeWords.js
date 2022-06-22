@@ -30,8 +30,8 @@ module.exports = {
         let hours = timeString[0] + timeString[1];
         let minutes = timeString[3] + timeString[4];
 
-        if(Number(hours) > 23 || Number(minutes) > 59) {
-            throw new RangeError('Invalid time entered. Hours must be less than 24 and Minutes less than 60.')
+        if(Number(hours) > 23 || Number(minutes) > 59 || Number(hours) < 0 || Number(minutes) < 0) {
+            throw new RangeError('Invalid time entered. Hours must be in interval [00, 24) and Minutes in [00, 60).')
         }
     
         //figure out if it's am or pm
