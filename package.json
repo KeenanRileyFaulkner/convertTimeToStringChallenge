@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "jest": "^28.1.1"
+  },
+  "name": "converttimetowordschallenge",
+  "version": "1.0.0",
+  "main": "timeWords.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
